@@ -1,0 +1,4 @@
+venv/
+budjetti.db
+__pycache__/
+*.pyc
