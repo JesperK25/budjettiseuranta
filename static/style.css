@@ -1,0 +1,193 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', Arial, sans-serif;
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 24px 20px;
+    background-color: #f8f7f4;
+    color: #1a1a1a;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 0 24px;
+    border-bottom: 1px solid #e8e6e1;
+    margin-bottom: 32px;
+}
+
+.nav-logo {
+    font-size: 18px;
+    font-weight: 600;
+    color: #1a1a1a;
+}
+
+nav a {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    background: #534AB7;
+    color: white;
+    text-decoration: none;
+    padding: 8px 18px;
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: 500;
+    transition: background 0.2s;
+}
+
+nav a:hover {
+    background: #3C3489;
+}
+
+.section-label {
+    font-size: 12px;
+    font-weight: 500;
+    color: #888;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    margin-bottom: 12px;
+}
+
+.kortit {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 12px;
+    margin-bottom: 32px;
+}
+
+.kortti {
+    background: #f0ede8;
+    border-radius: 12px;
+    padding: 20px;
+}
+
+.kortti h2 {
+    font-size: 13px;
+    font-weight: 500;
+    color: #888;
+    margin-bottom: 8px;
+}
+
+.kortti p {
+    font-size: 24px;
+    font-weight: 600;
+}
+
+.vihrea p { color: #0F6E56; }
+.punainen p { color: #993C1D; }
+.sininen { background: #EEEDFE; }
+.sininen h2 { color: #534AB7; }
+.sininen p { color: #3C3489; }
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background: white;
+    border-radius: 12px;
+    overflow: hidden;
+    border: 1px solid #e8e6e1;
+}
+
+thead tr {
+    background: #f8f7f4;
+}
+
+th {
+    padding: 10px 16px;
+    text-align: left;
+    font-size: 11px;
+    font-weight: 500;
+    color: #888;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    border-bottom: 1px solid #e8e6e1;
+}
+
+td {
+    padding: 14px 16px;
+    font-size: 14px;
+    border-bottom: 0.5px solid #f0ede8;
+    color: #333;
+}
+
+tr:last-child td {
+    border-bottom: none;
+}
+
+.badge-tulo {
+    background: #E1F5EE;
+    color: #0F6E56;
+    font-size: 12px;
+    font-weight: 500;
+    padding: 3px 10px;
+    border-radius: 20px;
+}
+
+.badge-meno {
+    background: #FAECE7;
+    color: #993C1D;
+    font-size: 12px;
+    font-weight: 500;
+    padding: 3px 10px;
+    border-radius: 20px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    max-width: 480px;
+    background: white;
+    padding: 32px;
+    border-radius: 12px;
+    border: 1px solid #e8e6e1;
+}
+
+label {
+    font-size: 13px;
+    font-weight: 500;
+    color: #555;
+    margin-bottom: 4px;
+    display: block;
+}
+
+input, select {
+    padding: 10px 12px;
+    border: 1px solid #e8e6e1;
+    border-radius: 8px;
+    font-size: 14px;
+    width: 100%;
+    background: #fafaf9;
+    transition: border-color 0.2s;
+}
+
+input:focus, select:focus {
+    outline: none;
+    border-color: #534AB7;
+    background: white;
+}
+
+button {
+    padding: 12px;
+    background: #534AB7;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 15px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+button:hover {
+    background: #3C3489;
+}

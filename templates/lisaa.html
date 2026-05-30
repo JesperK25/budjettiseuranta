@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+
+{% block sisalto %}
+
+<h1>Lisää merkintä</h1>
+
+<form method="POST">
+
+    <label>Tyyppi:</label>
+    <select name="tyyppi">
+        <option value="tulo">Tulo</option>
+        <option value="meno">Meno</option>
+    </select>
+
+    <label>Kategoria:</label>
+    <input type="text" name="kategoria" placeholder="esim. ruoka, palkka" required>
+
+    <label>Summa (€):</label>
+    <input type="number" name="summa" step="0.01" min="0" required>
+
+    <label>Kuvaus (vapaaehtoinen):</label>
+    <input type="text" name="kuvaus">
+
+    <label>Päivämäärä:</label>
+    <input type="date" name="paivamaara" required>
+
+    <button type="submit">Tallenna</button>
+</form>
+
+{% endblock %}

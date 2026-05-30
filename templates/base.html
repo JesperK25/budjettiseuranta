@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="fi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Budjettiseuranta</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+   <nav>
+    <span class="nav-logo">💰 Budjettiseuranta</span>
+    <a href="{{ url_for('lisaa_merkinta') }}">+ Lisää merkintä</a>
+    </nav>
+
+    <main>
+        {% block sisalto %}
+        {% endblock %}
+    </main>
+</body>
+</html>

@@ -1,0 +1,50 @@
+{% extends "base.html" %}
+
+{% block sisalto %}
+
+<h1>Yhteenveto</h1>
+
+<div class="kortit">
+    <div class="kortti vihrea">
+        <h2>Tulot</h2>
+        <p>{{ "%.2f" | format(tulot) }} €</p>
+    </div>
+    <div class="kortti punainen">
+        <h2>Menot</h2>
+        <p>{{ "%.2f" | format(menot) }} €</p>
+    </div>
+    <div class="kortti sininen">
+        <h2>Saldo</h2>
+        <p>{{ "%.2f" | format(saldo) }} €</p>
+    </div>
+</div>
+
+<h2>Viimeisimmät merkinnät</h2>
+<table>
+    <tr>
+        <th>Tyyppi</th>
+        <th>Kategoria</th>
+        <th>Summa</th>
+        <th>Kuvaus</th>
+        <th>Päivämäärä</th>
+        <th>Toiminnot</th>
+    </tr>
+    {% for merkinta in merkinnat %}
+    <tr>
+        <td><span class="badge-{{ merkinta['tyyppi'] }}">{{ merkinta["tyyppi"] }}</span></td>
+        <td>{{ merkinta["kategoria"] }}</td>
+        <td>{{ "%.2f" | format(merkinta["summa"]) }} €</td>
+        <td>{{ merkinta["kuvaus"] }}</td>
+        <td>{{ merkinta["paivamaara"] }}</td>
+        <td>
+             <a href="{{ url_for('poista_merkinta', id=merkinta['id']) }}"
+             onclick="return confirm('Haluatko varmasti poistaa tämän merkinnän?')"
+             style="color: #993C1D; font-size: 13px; text-decoration: none;">
+             Poista
+         </a>
+        </td>
+    </tr> 
+    {% endfor %}
+</table>
+
+{% endblock %}
